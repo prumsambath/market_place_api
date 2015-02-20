@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount SabisuRails::Engine => "/sabisu_rails"
   namespace :api, defaults: { format: :json },
     constraints: { subdomain: 'api' }, path: '/' do
     scope module: :v1,
